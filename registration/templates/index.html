@@ -1,0 +1,109 @@
+{% load static %}
+{#{% load widget_tweaks %}#}
+
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stay Adobe</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/land.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+{##}
+{#    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />#}
+{#    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />#}
+{#    <!-- Plugin-CSS -->#}
+{#    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />#}
+{#    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />#}
+{#    <link rel="stylesheet" href="{% static  'css/magnific-popup.css'%}" />#}
+{#    <link rel="stylesheet" href="{% static  'css/animate.css'%}" />#}
+{#    <!-- Main-Stylesheets -->#}
+{#    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />#}
+{#          <link rel="stylesheet" href="{% static 'css/home-style.css' %}" />#}
+{##}
+{#    <link rel="stylesheet" href="{% static  'css/style.css'%}" />#}
+{#    <link rel="stylesheet" href="{% static  'css/responsive.css'%}" />#}
+{#    <script src="{% static  'javascript/modernizr-2.8.3.min.js'%}"></script>#}
+  </head>
+  <body data-spy="scroll" data-target="#primary-menu">
+
+{% block navbar %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">StayAdobe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Create</a>
+      <a class="nav-item nav-link" href="#">Read</a>
+      <a class="nav-item nav-link" href="#">Update</a>
+      <a class="nav-item nav-link" href="#">Delete</a>
+    </div>
+  </div>
+</nav>
+
+{% endblock %}
+
+
+{% block header %}
+
+
+{% endblock %}
+
+{#{% block content %}#}
+
+
+{#   <!--login-modal-->#}
+{#    {% include "login_signup.html" %}#}
+{#    <!--Feature-area-->#}
+{#    {% include "features.html" %}#}
+{##}
+{#    <!-- works -->#}
+{#    {% include "works.html" %}#}
+{##}
+{#    <!-- special-feat -->#}
+{#    {% include "special_feat.html" %}#}
+{##}
+{#    <!-- packages -->#}
+{#    {% include "packages.html" %}#}
+{##}
+{#    <!-- team-->#}
+{#    {% include "team.html" %}#}
+{##}
+{#    <!-- testimonial-->#}
+{#    {% include "testimonial.html" %}#}
+{##}
+{##}
+{#    {% endblock %}#}
+{##}
+{##}
+{#    <!-- footer-->#}
+{#    {% include "footer.html" %}#}
+
+
+
+
+
+
+  </body>
+</html>
