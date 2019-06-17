@@ -98,8 +98,6 @@ def updatedb(request):
         elif request.POST.get("delete") :
 
             feed.delete()
-            # feed.save()
-
             messages.success(request, 'To-do deleted successfully')
 
 
@@ -113,6 +111,15 @@ class ReadTodo(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        print(context)
+        for todo in context['object_list']:
+            print(todo.email)
+            if todo.status == 1:
+                todo.status = "Pending"
+
+            elif todo.status == 2:
+                todo.status = "In Progress"
+
+            else:
+                todo.status = "Completed"
 
         return context

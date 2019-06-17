@@ -16,13 +16,15 @@
       </div>
     </div>
     <div class="container">
+
         <br>
         <h2>To-Do Update</h2>
         <div class="row">
             {% for todo in data %}
             <div class="col-md-4">
-                <form method="post" action="/todo/update_db/">
-                    {% csrf_token %}
+
+                    <form method="post" action="/todo/update_db/">
+                        {% csrf_token %}
 
                     <div class="card" style="width: 20rem;">
                       <div class="card-body">
@@ -92,15 +94,19 @@
                                     </div>
                                 </div>
 
+
+
                           </p>
-                    </form>
+                        </form>
                     </div>
                 </div>
                 <br>
-             </div>
+                </div>
             {% endfor %}
         </div>
 
     </div>
+
+
 
 {% endblock %}
