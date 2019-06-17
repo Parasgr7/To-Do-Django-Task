@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url
+from django.conf.urls import url,include
 from registration import views
 
 urlpatterns = [
     url(r'^$', views.land_redirect, name='land_redirect'),
     path('admin/', admin.site.urls),
+    url(r'^todo/', include(('registration.urls', 'registration'), namespace='registration'))
 
 ]

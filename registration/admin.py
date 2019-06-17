@@ -4,10 +4,10 @@ from registration.actions import export_as_csv_action
 
 # Register your models here.
 class RegisterAdmin(admin.ModelAdmin):
-    actions = [export_as_csv_action("CSV Export", fields=['title', 'description','status'])]
-    list_display = ('title', 'description', 'time', 'status','created_date','modified_date')
-    list_filter = ('status','time','created_date','modified_date',)
-    search_fields = ('title', 'description',)
+    actions = [export_as_csv_action("CSV Export", fields=['email','title', 'description','status'])]
+    list_display = ('email','title', 'description', 'time', 'status','created_date','modified_date')
+    list_filter = ('status','time','created_date','modified_date')
+    search_fields = ('title', 'description','email')
 
 
 
