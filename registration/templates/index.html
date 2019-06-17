@@ -30,25 +30,13 @@
     />
 {##}
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-{#    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />#}
-{#    <!-- Plugin-CSS -->#}
-{#    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />#}
-{#    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />#}
-{#    <link rel="stylesheet" href="{% static  'css/magnific-popup.css'%}" />#}
-{#    <link rel="stylesheet" href="{% static  'css/animate.css'%}" />#}
-{#    <!-- Main-Stylesheets -->#}
-{#    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />#}
-{#          <link rel="stylesheet" href="{% static 'css/home-style.css' %}" />#}
-{##}
-{#    <link rel="stylesheet" href="{% static  'css/style.css'%}" />#}
-{#    <link rel="stylesheet" href="{% static  'css/responsive.css'%}" />#}
-{#    <script src="{% static  'javascript/modernizr-2.8.3.min.js'%}"></script>#}
+
       <script>
-$(document).ready(function() {
-    $(document).on('click', '.nav-item a', function (e) {
-        $(this).parent().addClass('active').siblings().removeClass('active');
-    });
-});
+        $(document).ready(function() {
+            $(document).on('click', '.nav-item a', function (e) {
+                $(this).parent().addClass('active').siblings().removeClass('active');
+            });
+        });
 
       </script>
   </head>
@@ -57,18 +45,18 @@ $(document).ready(function() {
 {% block navbar %}
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">StayAdobe</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="{% url 'registration:create' %}">Create</a>
-      <a class="nav-item nav-link" href="{% url 'registration:read-todo' %}">Read</a>
-      <a class="nav-item nav-link" href="{% url 'registration:update_delete' %}">Update & Delete</a>
-    </div>
-  </div>
-</nav>
+          <a class="navbar-brand" href="/">StayAdobe</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="{% url 'registration:create' %}">Create</a>
+              <a class="nav-item nav-link" href="{% url 'registration:read-todo' %}">Read</a>
+              <a class="nav-item nav-link" href="{% url 'registration:update_delete' %}">Update & Delete</a>
+            </div>
+          </div>
+    </nav>
 
 
 {% endblock %}
@@ -76,63 +64,62 @@ $(document).ready(function() {
 
 {% block header %}
     <div class="container">
-    <div class="row">
-
-        <div class="col-md-12">
-            <br>
-            <h2>
-                To-Do list App
-            </h2>
-            <br>
-            <h4>
-                Features:
-                <h6>
-                    <ul>
-                        1. Create Todos
-                    </ul>
-                    <ul>
-                        2. Read Todos via ListAPI view method
-                    </ul>
-                    <ul>
-                        3. Update Todos
-                    </ul>
-                    <ul>
-                        4. Delete Todos
-                    </ul>
-                    <ul>
-                        5. Modified Admin Interface of Todos
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <h2>
+                    To-Do list App
+                </h2>
+                <br>
+                <h4>
+                    Features:
+                    <h6>
                         <ul>
-                            a. Can Filter
+                            1. Create Todos
                         </ul>
                         <ul>
-                            b. Can Search
-
+                            2. Read Todos via ListAPI view method
                         </ul>
                         <ul>
-                            a. Can Export bulk data as CSV
-
+                            3. Update Todos
                         </ul>
                         <ul>
-                            a. Custon User Model Interface with Email and Password
-
+                            4. Delete Todos
                         </ul>
-                    </ul>
-                </h6>
-            </h4>
+                        <ul>
+                            5. Modified Admin Interface of Todos
+                            <ul>
+                                a. Can Filter
+                            </ul>
+                            <ul>
+                                b. Can Search
+
+                            </ul>
+                            <ul>
+                                a. Can Export bulk data as CSV
+
+                            </ul>
+                            <ul>
+                                a. Custon User Model Interface with Email and Password
+
+                            </ul>
+                        </ul>
+                    </h6>
+                </h4>
+            </div>
         </div>
-    </div>
     </div>
 
 {% endblock %}
 
 <script type="text/javascript">
 
-            $('.dropdown-menu > .dropdown-item').click(function(){
-    $('#selected').text($(this).text());
-  });
+    $('.dropdown-menu > .dropdown-item').click(function(){
+        $('#selected').text($(this).text());
+    });
 
 
-        </script>
+</script>
 
   </body>
 </html>
