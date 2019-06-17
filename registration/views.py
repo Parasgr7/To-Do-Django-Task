@@ -15,6 +15,23 @@ def create(request):
 def read(request):
 
     todos = Registration.objects.all().values()
+    # for todo in todos:
+    #     if todo['status']==1:
+    #         todo['status'] = "Pending"
+    #
+    #     elif todo['status']==2:
+    #         todo['status'] = "In Progress"
+    #
+    #     else:
+    #         todo['status'] = "Completed"
+
+    args= {'data': todos}
+
+    return render(request, 'read.html',args)
+
+def update(request):
+
+    todos = Registration.objects.all().values()
     for todo in todos:
         if todo['status']==1:
             todo['status'] = "Pending"
@@ -27,11 +44,7 @@ def read(request):
 
     args= {'data': todos}
 
-    return render(request, 'read.html',args)
-
-def update(request):
-
-    return render(request, 'update.html')
+    return render(request, 'update.html',args)
 
 def delete(request):
 
